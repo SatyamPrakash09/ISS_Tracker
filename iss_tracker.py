@@ -5,7 +5,7 @@ from datetime import datetime , timezone, timedelta
 import os
 import csv
 
-filename = "iss_tracker/iss_data.csv"
+filename = "./iss_data.csv"
 if not os.path.exists(filename):
     with open (filename, "w", newline="") as fin:
         writer = csv.writer(fin)
@@ -14,11 +14,11 @@ if not os.path.exists(filename):
 screen = turtle.Screen()
 screen.setup(720, 360)
 screen.setworldcoordinates(-180, -90, 180, 90)
-screen.bgpic("iss_tracker/world.png")
-screen.register_shape("iss_tracker/iss.gif")
+screen.bgpic("./world.png")
+screen.register_shape("./iss.gif")
 
 iss = turtle.Turtle()
-iss.shape("iss_tracker/iss.gif")
+iss.shape("./iss.gif")
 iss.penup()
 
 while True:
